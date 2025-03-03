@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DBC OEM | Milenia Mega Mandiri</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.webp" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <style>
+      .business-box {
+        background-color: #ffffff;
+        border: 2px solid #660ff1;
+        border-radius: 10px;
+        padding: 30px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .business-box h3 {
+        font-size: 24px;
+        color: #660ff1;
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
+
+      .business-box p {
+        font-size: 16px;
+        color: #555;
+      }
+
+      .business-box:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(102, 15, 241, 0.2);
+      }
+
+      .custom-business-img {
+        width: 50%;
+      }
+
+      .custom-structure-img {
+        width: 75%;
+      }
+
+      .portfolio .portfolio-content .portfolio-info .preview-link,
+      .portfolio .portfolio-content .portfolio-info .details-link {
+        left: calc(60% - 40px);
+      }
+
+      #oemcustomer img {
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+      }
+
+      #oemcustomer img:hover {
+        filter: grayscale(0%);
+      }
+
+      .product-card {
+        border: 2px solid #660ff1;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(102, 15, 241, 0.2);
+      }
+
+      #newproduct h2,
+      #newproduct .section-title h2 {
+        color: #660ff1;
+      }
+
+      #newproduct h3 {
+        color: #660ff1;
+        font-weight: 600;
+      }
+
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        background-color: #660ff1;
+        border-radius: 15%;
+      }
+
+      #newproduct p {
+        font-size: 1rem;
+        color: #333;
+      }
+
+      /* Pastikan elemen .credits memiliki posisi relative agar pseudo-element dapat ditempatkan secara absolut */
+      .credits {
+        position: relative;
+        /* display: inline-block; */
+        cursor: pointer;
+      }
+
+      /* Gaya tooltip default (tersembunyi) */
+      .credits::after {
+        content: "Ananda Satria Ariyanto";
+        position: absolute;
+        bottom: 120%; /* menampilkan tooltip di atas teks */
+        left: 50%;
+        transform: translateX(-50%) scale(0.8);
+        background-color: #660ff1;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 20px; /* border bulat */
+        white-space: nowrap;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        pointer-events: none;
+        z-index: 10;
+      }
+
+      /* Tanda panah di tooltip (opsional) */
+      .credits::before {
+        content: "";
+        position: absolute;
+        bottom: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 6px;
+        border-style: solid;
+        border-color: transparent transparent #660ff1 transparent;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+        z-index: 10;
+      }
+
+      /* Tampilkan tooltip ketika dihover */
+      .credits:hover::after,
+      .credits:hover::before {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+      }
+
+      .hero p {
+          margin-bottom: 10px;
+          font-size: 60px;
+      }
+
+      .logo-text {
+        display: flex;
+        align-items: center; /* Agar logo sejajar dengan teks */
+        gap: 8px; /* Jarak antara gambar dan teks */
+      }
+
+      .logo-text img {
+        width: 70px;
+        height: auto;
+        position: relative;
+        top: 0;
+        filter: drop-shadow(0px 2px 4px rgba(102, 15, 241, 0.5));
+      }
+
+      #hero h2 {
+        font-size: 45px; /* Sesuaikan ukuran sesuai kebutuhan */
+      }
+
+      /* Mengubah <small> menjadi slogan dengan gaya teks Latin */
+      .container small {
+        font-family: 'Dancing Script', cursive;
+        font-style: italic;
+        letter-spacing: 1px;
+        font-size: 30px; /* Atur ukuran sesuai kebutuhan */
+        display: block;
+      }
+
+      small {
+      display: block;
+      font-size: 0.9rem;
+      font-style: italic;
+      margin-top: 5px;
+      letter-spacing: 0.5px;
+    }
+
+    .custom-business-img {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .custom-business-img:hover {
+      transform: scale(1.1);
+    }
+
+    .custom-structure-img {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .custom-structure-img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Efek floating */
+    .floating-img {
+      animation: floatAnimation 3s ease-in-out infinite; /* Animasi terus berjalan */
+      transition: transform 0.3s ease-in-out; /* Transisi smooth */
+    }
+
+    /* Saat hover, gambar membesar */
+    .floating-img:hover {
+      animation: floatAnimationHover 3s ease-in-out infinite;
+    }
+
+    .carousel-inner {
+      min-height: 170px; /* Sesuaikan dengan tinggi gambar terbesar */
+      display: flex;
+      align-items: center;
+    }
+
+    /* Animasi untuk efek melayang */
+    @keyframes floatAnimation {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px); /* Gambar naik */
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    @keyframes floatAnimationHover {
+      0% {
+        transform: translateY(0px) scale(1);
+      }
+      50% {
+        transform: translateY(-10px) scale(1.1);
+      }
+      100% {
+        transform: translateY(0px) scale(1);
+      }
+    }
+
+      @media (max-width: 767px) {
+        .custom-business-img {
+          width: 100%;
+        }
+
+        .custom-structure-img {
+          width: 100%;
+        }
+
+        .hero p {
+            font-size: 22px;
+        }
+        
+        #hero h2 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .container small {
+            font-size: 16px;
+        }
+
+        .logo-text img {
+          width: 32px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="index-page">
+    <header id="header" class="header dark-background d-flex flex-column">
+      <i class="header-toggle d-xl-none bi bi-list"></i>
+
+      <div class="profile-img">
+        <img src="assets/img/logo-milenia.webp" alt="" class="img-fluid rounded-3" loading="lazy" />
+      </div>
+
+      <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Milenia Mega Mandiri</h1>
+      </a>
+
+      <div class="social-links text-center">
+        <a href="https://www.youtube.com/@mileniagroup1970" target="_blank" class="youtube"><i class="bi bi-youtube"></i></a>
+        <a href="https://www.facebook.com/MileniaGroup1998/" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/mileniagroup/?hl=en" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/pt-milenia-mega-mandiri/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li>
+            <a href="#hero" class="active"><i class="bi bi-house navicon"></i> Home</a>
+          </li>
+          <li>
+            <a href="#introduction"><i class="bi bi-person navicon"></i> Introduction</a>
+          </li>
+          <li>
+            <a href="#business"><i class="bi bi-briefcase navicon"></i> Business</a>
+          </li>
+          <li>
+            <a href="#operation"><i class="bi bi-gear navicon"></i> Operation</a>
+          </li>
+          <li>
+            <a href="#structure"><i class="bi bi-diagram-3 navicon"></i> Structure Organization</a>
+          </li>
+          <li>
+            <a href="#subassembly"><i class="bi bi-layers navicon"></i> Sub Assembly</a>
+          </li>
+          <li>
+            <a href="#oemcustomer"><i class="bi bi-people navicon"></i> OEM Customer</a>
+          </li>
+          <li>
+            <a href="#suppliers"><i class="bi bi-truck navicon"></i> Suppliers</a>
+          </li>
+          <li>
+            <a href="#newproduct"><i class="bi bi-bag-plus navicon"></i> New Product</a>
+          </li>
+          <li>
+            <a href="#isocertification"><i class="bi bi-award navicon"></i> ISO Certification</a>
+          </li>
+          <li>
+            <a href="#oemconcept"><i class="bi bi-lightbulb navicon"></i> OEM Business Concept</a>
+          </li>
+          <li>
+            <a href="#oemsummary"><i class="bi bi-file-earmark-check navicon"></i> OEM Business Summary</a>
+          </li>
+          <li>
+            <a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a>
+          </li>
+          <!-- <li class="dropdown">
+            <a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown">
+                <a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li> -->
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <!-- Hero Section -->
+      <section id="hero" class="hero section dark-background">
+        <img src="assets/img/bg-gedung.webp" alt="" data-aos="fade-in" class="" loading="lazy" />
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <h2>Company Profile</h2>
+          <div class="logo-text">
+            <img src="assets/img/logo-milenia.webp" alt="Logo Milenia" loading="lazy">
+            <p>PT <span class="typed" data-typed-items="MILENIA MEGA MANDIRI"></span></p>
+          </div>
+          <small>Excellence in Automotive Industry OEM Design & Accessories Products</small>
+        </div>
+      </section>
+      <!-- /Hero Section -->
+
+      <!-- Introduction Section -->
+      <section id="introduction" class="about section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2 class="intro">INTRODUCTION</h2>
+          <p>
+            PT. Milenia Mega Mandiri has been serving for 25 years in the automotive security systems and automotive electronics industry. We provide custom
+            design solutions through joint development, manufacturing, assembly, and after-sales services for the automotive industry as well as for
+            aftermarket customers through ODM business relationships.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4 justify-content-center">
+            <div class="col-lg-4">
+              <img src="assets/img/founder.webp" class="img-fluid" alt="Founder Milenia" loading="lazy" />
+            </div>
+            <div class="col-lg-8 content">
+              <h2>PT. Milenia Mega Mandiri</h2>
+              <p class="fst-italic py-3">
+                With over 20 years of development experience, support from our technical partners in Taiwan & China, advanced equipment, and an
+                experienced R&D team, we are always at the forefront of innovation in vehicle security systems and automotive electronics.
+              </p>
+              <div class="row">
+                <div class="col-lg-12">
+                  <ul>
+                    <li><i class="bi bi-calendar3"></i> <strong>Founded:</strong> <span>1988</span></li>
+                    <li><i class="bi bi-person-fill"></i> <strong>Founder:</strong> <span>Mr. Charles Wong</span></li>
+                    <li><i class="bi bi-building"></i> <strong>Company Status:</strong> <span>Private Ownership</span></li>
+                    <li>
+                      <i class="bi bi-briefcase-fill"></i> <strong>Business Field:</strong>
+                      <span>Automotive, Accessories Product & OEM Design Security System, ADAS</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-geo-alt"></i> <strong>Operations:</strong>
+                      <span>Cental Jakarta, South Jakarta, Cikupa, Tigaraksa Tangerang</span>
+                    </li>
+                    <li><i class="bi bi-people-fill"></i> <strong>Employees:</strong> <span>More than 180</span></li>
+                  </ul>
+                </div>
+              </div>
+              <p class="py-3">
+                We are committed to delivering the best service with ISO 9001 and QE 9001 quality standards. Strategic collaborations with our
+                partners and a deep understanding of customer needs have made us the primary choice in automotive security solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /About Section -->
+
+      <!-- Stats Section -->
+      <!-- <section id="stats" class="stats section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item">
+                <i class="bi bi-emoji-smile"></i>
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                <p><strong>Happy Clients</strong> <span>consequuntur quae</span></p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item">
+                <i class="bi bi-journal-richtext"></i>
+                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+                <p><strong>Projects</strong> <span>adipisci atque cum quia aut</span></p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item">
+                <i class="bi bi-headset"></i>
+                <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
+                <p><strong>Hours Of Support</strong> <span>aut commodi quaerat</span></p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item">
+                <i class="bi bi-people"></i>
+                <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+                <p><strong>Hard Workers</strong> <span>rerum asperiores dolor</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- /Stats Section -->
+
+      <!-- Skills Section -->
+      <section id="business" class="business section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Our Business</h2>
+          <p>
+            PT. Milenia Mega Mandiri operates across a diverse range of segments, including Retail, Project/OEM, and Wholesale. Our comprehensive approach
+            ensures that we deliver innovative and reliable automotive security solutions to meet every market need.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <img
+            src="assets/img/business.webp"
+            class="img-fluid d-block mx-auto custom-business-img"
+            alt="Milenia Business Scope: Retail, Project/OEM, and Wholesale" loading="lazy" />
+        </div>
+
+        <div class="container" data-aos="fade-up" data-aos-delay="200">
+          <div class="row text-center mt-5">
+            <div class="col-lg-4 mb-4">
+              <div class="business-box p-4 shadow-sm">
+                <h3>Retail</h3>
+                <p>We offer a wide range of top-quality automotive security products directly to consumers through our exclusive retail outlets.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+              <div class="business-box p-4 shadow-sm">
+                <h3>Project/OEM</h3>
+                <p>
+                  We specialize in tailor-made solutions for automotive manufacturers, providing innovative designs and OEM services that meet strict
+                  industry standards.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+              <div class="business-box p-4 shadow-sm">
+                <h3>Wholesale</h3>
+                <p>
+                  Our robust supply chain and extensive distribution network enable us to serve bulk orders and maintain strategic partnerships
+                  globally.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Skills Section -->
+
+      <!-- Operation Section -->
+      <section id="operation" class="testimonials section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Operation</h2>
+          <p>
+            At Milenia, our operations are strategically located to optimize service delivery and quality control. From our central Head Office
+            in Jakarta to our retail outlets, warehouse distribution center, and sub-assembly plant in Tigaraksa, each facility plays a vital role in
+            ensuring our automotive security solutions reach customers efficiently and reliably.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                  "delay": 5000
+                },
+                "slidesPerView": "auto",
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                },
+                "breakpoints": {
+                  "320": {
+                    "slidesPerView": 1,
+                    "spaceBetween": 40
+                  },
+                  "1200": {
+                    "slidesPerView": 3,
+                    "spaceBetween": 1
+                  }
+                }
+              }
+            </script>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>Jl.Pembangunan 1 No 1 Jakarta Pusat</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                  <img src="assets/img/testimonials/kantor-pembangunan.webp" class="testimonial-img" alt="" loading="lazy" />
+                  <h3>HEAD OFFICE</h3>
+                  <h4>
+                    <a href="https://g.co/kgs/yg5iSxL" target="_blank"><u>See Details</u></a>
+                  </h4>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>Jl Radio Dalam No 18 Jakarta Selatan</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                  <img src="assets/img/testimonials/kantor-dcartail.webp" class="testimonial-img" alt="" loading="lazy" />
+                  <h3>RETAIL 1</h3>
+                  <h4>
+                    <a href="https://g.co/kgs/PKvzQfD" target="_blank"><u>See Details</u></a>
+                  </h4>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>Kawasan Industry Cikupa Mas no. 6 Kab. Tangerang</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                  <img src="assets/img/testimonials/kantor-cikupa.webp" class="testimonial-img" alt="" loading="lazy" />
+                  <h3>WAREHOUSE DISTRIBUTION</h3>
+                  <h4>
+                    <a href="https://g.co/kgs/E8YqrY8" target="_blank"><u>See Details</u></a>
+                  </h4>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>Jl Pecenongan No 55A Jakarta Pusat</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                  <img src="assets/img/testimonials/kantor-sonax.webp" class="testimonial-img" alt="" loading="lazy" />
+                  <h3>RETAIL 2</h3>
+                  <h4>
+                    <a href="https://g.co/kgs/5dJ9RYf" target="_blank"><u>See Details</u></a>
+                  </h4>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>Jl KH Syek Nawawi Budi Mulya, Tiga Raksa Cikupa Kab. Tangerang</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                  <img src="assets/img/testimonials/kantor-tigaraksa.webp" class="testimonial-img" alt="" loading="lazy" />
+                  <h3>SUB ASSEMBLY PLANT TIGARAKSA</h3>
+                  <h4>
+                    <a href="https://g.co/kgs/C5kDmpP" target="_blank"><u>See Details</u></a>
+                  </h4>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- /Operation Section -->
+
+      <!-- Structure Section -->
+      <section id="structure" class="business section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Structure Organization</h2>
+          <p>
+            Our organizational structure is designed to foster innovation, collaboration, and operational excellence. At Milenia, each department
+            plays a vital role in ensuring seamless communication and effective decision-making, empowering us to deliver outstanding automotive
+            security solutions.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/img/structure.webp" class="img-fluid d-block mx-auto custom-structure-img" alt="Structure Organization Milenia" loading="lazy" />
+        </div>
+      </section>
+      <!-- /Structure Section -->
+
+      <!-- Sub Assembly Section -->
+      <section id="subassembly" class="portfolio section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Sub Assembly Line Tigaraksa</h2>
+          <p>
+            Our Sub Assembly Line in Tigaraksa is a modern production hub that integrates efficient warehouse, assembly, and harness lines. With a
+            spacious warehouse area of approximately ±500 M2, an expansive assembly line covering ±1000 M2, and a dedicated harness line featuring 3
+            production lines and 11 facing workstations, our facility is designed to deliver superior quality and operational excellence.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+            <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-warehouse">Warehouse Area</li>
+              <li data-filter=".filter-assembly">Assembly Line</li>
+              <li data-filter=".filter-harness">Harness Line</li>
+            </ul>
+            <!-- End Portfolio Filters -->
+
+            <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-warehouse">
+                <div class="portfolio-content h-100">
+                  <img src="assets/img/tigaraksa/warehouse1.webp" class="img-fluid" alt="" loading="lazy" />
+                  <div class="portfolio-info">
+                    <h4>Warehouse Area Tigaraksa</h4>
+                    <p>Warehouse Area Tigaraksa ±500 M2</p>
+                    <a
+                      href="assets/img/tigaraksa/warehouse1.webp"
+                      title="Warehouse Area Tigaraksa ±500 M2"
+                      data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-assembly">
+                <div class="portfolio-content h-100">
+                  <img src="assets/img/tigaraksa/assembly1.webp" class="img-fluid" alt="" loading="lazy" />
+                  <div class="portfolio-info">
+                    <h4>Assembly Line Area Tigaraksa</h4>
+                    <p>Assembly Line Area Tigaraksa ±1000 M2</p>
+                    <a
+                      href="assets/img/tigaraksa/assembly1.webp"
+                      title="Assembly Line Area Tigaraksa ±1000 M2"
+                      data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-assembly">
+                <div class="portfolio-content h-100">
+                  <img src="assets/img/tigaraksa/assembly2.webp" class="img-fluid" alt="" loading="lazy" />
+                  <div class="portfolio-info">
+                    <h4>Assembly Line Area Tigaraksa</h4>
+                    <p>Assembly Line Area Tigaraksa ±1000 M2</p>
+                    <a
+                      href="assets/img/tigaraksa/assembly2.webp"
+                      title="Assembly Line Area Tigaraksa ±1000 M2"
+                      data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-assembly">
+                <div class="portfolio-content h-100">
+                  <img src="assets/img/tigaraksa/assembly3.webp" class="img-fluid" alt="" />
+                  <div class="portfolio-info">
+                    <h4>Assembly Line Area Tigaraksa</h4>
+                    <p>Assembly Line Area Tigaraksa ±1000 M2</p>
+                    <a
+                      href="assets/img/tigaraksa/assembly3.webp"
+                      title="Assembly Line Area Tigaraksa ±1000 M2"
+                      data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-harness">
+                <div class="portfolio-content h-100">
+                  <img src="assets/img/tigaraksa/harness1.webp" class="img-fluid" alt="" loading="lazy" />
+                  <div class="portfolio-info">
+                    <h4>Harness Line Area Tigaraksa</h4>
+                    <p>3 Line dengan 11 Meja Berhadapan</p>
+                    <a
+                      href="assets/img/tigaraksa/harness1.webp"
+                      title="3 Line dengan 11 Meja Berhadapan"
+                      data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-warehouse">
+                <div class="portfolio-content h-100">
+                  <img src="assets/img/tigaraksa/warehouse2.webp" class="img-fluid" alt="" loading="lazy" />
+                  <div class="portfolio-info">
+                    <h4>Warehouse Area Tigaraksa</h4>
+                    <p>Warehouse Area Tigaraksa ±500 M2</p>
+                    <a
+                      href="assets/img/tigaraksa/warehouse2.webp"
+                      title="Warehouse Area Tigaraksa ±500 M2"
+                      data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-assembly">
+                <div class="portfolio-content h-100">
+                  <img src="assets/img/tigaraksa/assembly4.webp" class="img-fluid" alt="" />
+                  <div class="portfolio-info">
+                    <h4>Assembly Line Area Tigaraksa</h4>
+                    <p>Assembly Line Area Tigaraksa ±1000 M2</p>
+                    <a
+                      href="assets/img/tigaraksa/assembly4.webp"
+                      title="Assembly Line Area Tigaraksa ±1000 M2"
+                      data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-assembly">
+                <div class="portfolio-content h-100">
+                  <img src="assets/img/tigaraksa/assembly5.webp" class="img-fluid" alt="" loading="lazy" />
+                  <div class="portfolio-info">
+                    <h4>Assembly Line Area Tigaraksa</h4>
+                    <p>Assembly Line Area Tigaraksa ±1000 M2</p>
+                    <a
+                      href="assets/img/tigaraksa/assembly5.webp"
+                      title="Assembly Line Area Tigaraksa ±1000 M2"
+                      data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-assembly">
+                <div class="portfolio-content h-100">
+                  <img src="assets/img/tigaraksa/assembly6.webp" class="img-fluid" alt="" loading="lazy" />
+                  <div class="portfolio-info">
+                    <h4>Assembly Line Area Tigaraksa</h4>
+                    <p>Assembly Line Area Tigaraksa ±1000 M2</p>
+                    <a
+                      href="assets/img/tigaraksa/assembly6.webp"
+                      title="Assembly Line Area Tigaraksa ±1000 M2"
+                      data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-harness">
+                <div class="portfolio-content h-100">
+                  <img src="assets/img/tigaraksa/harness2.webp" class="img-fluid" alt="" />
+                  <div class="portfolio-info">
+                    <h4>Harness Line Area Tigaraksa</h4>
+                    <p>3 Line dengan 11 Meja Berhadapan</p>
+                    <a
+                      href="assets/img/tigaraksa/harness2.webp"
+                      title="3 Line dengan 11 Meja Berhadapan"
+                      data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-warehouse">
+                <div class="portfolio-content h-100">
+                  <img src="assets/img/tigaraksa/warehouse3.webp" class="img-fluid" alt="" loading="lazy" />
+                  <div class="portfolio-info">
+                    <h4>Warehouse Area Tigaraksa</h4>
+                    <p>Warehouse Area Tigaraksa ±500 M2</p>
+                    <a
+                      href="assets/img/tigaraksa/warehouse3.webp"
+                      title="Warehouse Area Tigaraksa ±500 M2"
+                      data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-assembly">
+                <div class="portfolio-content h-100">
+                  <img src="assets/img/tigaraksa/assembly7.webp" class="img-fluid" alt="" loading="lazy" />
+                  <div class="portfolio-info">
+                    <h4>Assembly Line Area Tigaraksa</h4>
+                    <p>Assembly Line Area Tigaraksa ±1000 M2</p>
+                    <a
+                      href="assets/img/tigaraksa/assembly7.webp"
+                      title="Assembly Line Area Tigaraksa ±1000 M2"
+                      data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-assembly">
+                <div class="portfolio-content h-100">
+                  <img src="assets/img/tigaraksa/assembly8.webp" class="img-fluid" alt="" />
+                  <div class="portfolio-info">
+                    <h4>Assembly Line Area Tigaraksa</h4>
+                    <p>Assembly Line Area Tigaraksa ±1000 M2</p>
+                    <a
+                      href="assets/img/tigaraksa/assembly8.webp"
+                      title="Assembly Line Area Tigaraksa ±1000 M2"
+                      data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-assembly">
+                <div class="portfolio-content h-100">
+                  <img src="assets/img/tigaraksa/assembly9.webp" class="img-fluid" alt="" loading="lazy" />
+                  <div class="portfolio-info">
+                    <h4>Assembly Line Area Tigaraksa</h4>
+                    <p>Assembly Line Area Tigaraksa ±1000 M2</p>
+                    <a
+                      href="assets/img/tigaraksa/assembly9.webp"
+                      title="Assembly Line Area Tigaraksa ±1000 M2"
+                      data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-harness">
+                <div class="portfolio-content h-100">
+                  <img src="assets/img/tigaraksa/harness3.webp" class="img-fluid" alt="" loading="lazy" />
+                  <div class="portfolio-info">
+                    <h4>Harness Line Area Tigaraksa</h4>
+                    <p>3 Line dengan 11 Meja Berhadapan</p>
+                    <a
+                      href="assets/img/tigaraksa/harness3.webp"
+                      title="3 Line dengan 11 Meja Berhadapan"
+                      data-gallery="portfolio-gallery-app"
+                      class="glightbox preview-link"
+                      ><i class="bi bi-zoom-in"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Container -->
+          </div>
+        </div>
+      </section>
+      <!-- /Sub Assembly Section -->
+
+      <!-- OEM Customer Section -->
+      <section id="oemcustomer" class="business section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>OEM Customer</h2>
+          <p>
+            We proudly collaborate with leading automotive brands worldwide. Our esteemed OEM customers include Toyota, Mazda, Hino, Mitsubishi,
+            Hyundai, Suzuki, Kia, Subaru, and Nissan.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-4 col-md-4 col-lg-4 mb-4">
+              <img src="assets/img/customer/toyota.webp" width="40%" class="img-fluid d-block mx-auto oem-logo" alt="Toyota" loading="lazy" />
+            </div>
+            <div class="col-4 col-md-4 col-lg-4 mb-4">
+              <img src="assets/img/customer/mazda.webp" width="40%" class="img-fluid d-block mx-auto" alt="Mazda" loading="lazy" />
+            </div>
+            <div class="col-4 col-md-4 col-lg-4 mb-4">
+              <img src="assets/img/customer/hino.webp" width="40%" class="img-fluid d-block mx-auto" alt="Hino" loading="lazy" />
+            </div>
+            <div class="col-4 col-md-4 col-lg-4 mb-4">
+              <img src="assets/img/customer/mitsubishi.webp" width="40%" class="img-fluid d-block mx-auto" alt="Mitsubishi" loading="lazy" />
+            </div>
+            <div class="col-4 col-md-4 col-lg-4 mb-4">
+              <img src="assets/img/customer/hyundai.webp" width="40%" class="img-fluid d-block mx-auto" alt="Hyundai" loading="lazy" />
+            </div>
+            <div class="col-4 col-md-4 col-lg-4 mb-4">
+              <img src="assets/img/customer/suzuki.webp" width="40%" class="img-fluid d-block mx-auto" alt="Suzuki" loading="lazy" />
+            </div>
+            <div class="col-4 col-md-4 col-lg-4 mb-4">
+              <img src="assets/img/customer/kia.webp" width="40%" class="img-fluid d-block mx-auto" alt="Kia" loading="lazy" />
+            </div>
+            <div class="col-4 col-md-4 col-lg-4 mb-4">
+              <img src="assets/img/customer/subaru.webp" width="40%" class="img-fluid d-block mx-auto" alt="Subaru" loading="lazy" />
+            </div>
+            <div class="col-4 col-md-4 col-lg-4 mb-4">
+              <img src="assets/img/customer/nissan.webp" width="40%" class="img-fluid d-block mx-auto" alt="Nissan" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /OEM Customer Section -->
+
+      <!-- Service Details Section -->
+      <section id="suppliers" class="service-details section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Our Suppliers</h2>
+          <p>
+            Our esteemed partners are integral to our commitment to quality and innovation. We work closely with industry-leading suppliers who
+            provide advanced components for automotive security systems and electronic solutions. Their expertise ensures that our products meet
+            international standards and exceed customer expectations.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="services-list">
+                <a class="active">NUTEK CORPORATION</a>
+              </div>
+
+              <h4><i class="bi bi-geo-alt-fill me-1"></i>Location</h4>
+              <p>Building 2 West No. 11 Chuangye Avenue Ningbo Free Trade Zone, 315800 Beilun Zhejiang, China</p>
+            </div>
+
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <img src="assets/img/nutek.webp" width="75%" alt="" class="img-fluid services-img" loading="lazy" />
+              <h3>NUTEK CORPORATION</h3>
+              <p>Our partner develop part:</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> <span>Car alarm security system</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Shock Sensor</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Auto Folding Mirror</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="container mt-5">
+          <div class="row gy-4">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="services-list">
+                <a class="active">DONPON GROUP</a>
+              </div>
+
+              <h4><i class="bi bi-geo-alt-fill me-1"></i>Location</h4>
+              <p>No. 38, Taoyuan Road, Gaochun Economic Development Zone, Nanjing City, Jiangsu Province, China</p>
+            </div>
+
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <img src="assets/img/donpon.webp" width="75%" alt="" class="img-fluid services-img" loading="lazy" />
+              <h3>DONPON GROUP</h3>
+              <p>Our partner develop part:</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> <span>Steering, camera wide angle</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Back Camera</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>USB Charger & Wireless Charger</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Blind Spot Detection, Air Purifier</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="container mt-5">
+          <div class="row gy-4">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="services-list">
+                <a class="active">COLIGEN CORPORATION</a>
+              </div>
+
+              <h4><i class="bi bi-geo-alt-fill me-1"></i>Location</h4>
+              <p>No.1 Bldg Guantang Ind. Park Jinding Zhuhai Guangdong China 519085</p>
+            </div>
+
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <img src="assets/img/coligen.webp" width="75%" alt="" class="img-fluid services-img" loading="lazy" />
+              <h3>COLIGEN CORPORATION</h3>
+              <p>Our partner develop part:</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> <span>Around View Monitor 360</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>ADAS Camera</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Clearance Sensor</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Microwave Sensor & Radar Sensor</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="container mt-5">
+          <div class="row gy-4">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="services-list">
+                <a class="active">CVTE Guangzhou Liuhuan Information Technology Co., Ltd</a>
+              </div>
+
+              <h4><i class="bi bi-geo-alt-fill me-1"></i>Location</h4>
+              <p>4th floor no 192 Kezhu Road GuangZhou City, Guangdong Province 510530 Guangzhou China</p>
+            </div>
+
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <img src="assets/img/cvte.webp" width="75%" alt="" class="img-fluid services-img" loading="lazy" />
+              <h3>CVTE Guangzhou Liuhuan Information Technology Co., Ltd</h3>
+              <p>Our partner develop part:</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> <span>Head Unit </span></li>
+                <li><i class="bi bi-check-circle"></i> <span>RSE</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Service Details Section -->
+
+      <!-- New Product Section -->
+      <section id="newproduct" class="business section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>New Product</h2>
+          <p>
+            Discover our latest innovations designed to elevate your automotive experience. Each product combines cutting-edge technology with
+            outstanding functionality.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <!-- PRODUCT CARD 1 -->
+          <!-- Mobile Version: Stacked Order (Title, Carousel, Function) -->
+          <div class="d-block d-md-none mb-5">
+            <h3>Head Unit with Smart Surface</h3>
+            <div id="carouselProduct1Mobile" class="carousel slide mb-3" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/img/product/head1.webp" class="d-block w-75 mx-auto product-img" alt="Head Unit Image 1" loading="lazy" />
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/product/head2.webp" class="d-block w-75 mx-auto product-img" alt="Head Unit Image 2" loading="lazy" />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct1Mobile" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct1Mobile" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <p>Function: Central Entertainment Control Unit, with integrated display embedded in a surface panel design.</p>
+          </div>
+
+          <!-- Desktop Version: Alternating Two-Column Layout -->
+          <div class="row align-items-center d-none d-md-flex mb-5">
+            <!-- For Product Card 1, image left, text right -->
+            <div class="col-md-6">
+              <div id="carouselProduct1" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/img/product/head1.webp" class="d-block w-75 mx-auto product-img" alt="Head Unit Image 1" loading="lazy" />
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/product/head2.webp" class="d-block w-75 mx-auto product-img" alt="Head Unit Image 2" loading="lazy" />
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct1" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct1" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h3>Head Unit with Smart Surface</h3>
+              <p>Function: Central Entertainment Control Unit, with integrated display embedded in a surface panel design.</p>
+            </div>
+          </div>
+
+          <!-- PRODUCT CARD 2 -->
+          <!-- Mobile Version -->
+          <div class="d-block d-md-none mb-5">
+            <h3>Motorized Head Unit</h3>
+            <div id="carouselProduct2Mobile" class="carousel slide mb-3" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/img/product/motorized1.webp" class="d-block w-50 mx-auto product-img" alt="Motorized Head Unit Image 1" loading="lazy" />
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/product/motorized2.webp" class="d-block w-50 mx-auto product-img" alt="Motorized Head Unit Image 2" loading="lazy" />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct2Mobile" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct2Mobile" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <p>Function: Central Entertainment Control Unit with motor control for adjustable viewing angle.</p>
+          </div>
+
+          <!-- Desktop Version -->
+          <div class="row align-items-center d-none d-md-flex mb-5">
+            <!-- For Product Card 2, text left, image right -->
+            <div class="col-md-6">
+              <h3>Motorized Head Unit</h3>
+              <p>Function: Central Entertainment Control Unit with motor control for adjustable viewing angle.</p>
+            </div>
+            <div class="col-md-6">
+              <div id="carouselProduct2" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/img/product/motorized1.webp" class="d-block w-50 mx-auto product-img" height="200" alt="Motorized Head Unit Image 1" loading="lazy" />
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/product/motorized2.webp" class="d-block w-50 mx-auto product-img" height="200" alt="Motorized Head Unit Image 2" loading="lazy" />
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct2" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct2" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT CARD 3 -->
+          <!-- Mobile Version -->
+          <div class="d-block d-md-none mb-5">
+            <h3>ADAS Camera</h3>
+            <div id="carouselProduct3Mobile" class="carousel slide mb-3" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/img/product/adas1.webp" class="d-block w-50 mx-auto product-img" alt="ADAS Camera Image 1" loading="lazy" />
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/product/adas2.webp" class="d-block w-50 mx-auto product-img" alt="ADAS Camera Image 2" loading="lazy" />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct3Mobile" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct3Mobile" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <p>Function: Assisting driver in monitoring road conditions, ensuring safety while driving, and integrated DVR functionality.</p>
+          </div>
+
+          <!-- Desktop Version -->
+          <div class="row align-items-center d-none d-md-flex mb-5">
+            <!-- For Product Card 3, image left, text right -->
+            <div class="col-md-6">
+              <div id="carouselProduct3" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/img/product/adas1.webp" class="d-block w-50 mx-auto product-img" height="250" alt="ADAS Camera Image 1" loading="lazy" />
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/product/adas2.webp" class="d-block w-50 mx-auto product-img" height="250" alt="ADAS Camera Image 2" loading="lazy" />
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct3" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct3" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h3>ADAS Camera</h3>
+              <p>Function: Assisting driver in monitoring road conditions, ensuring safety while driving, and integrated DVR functionality.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /New Product Section -->
+
+      <!-- Certification Section -->
+      <section id="isocertification" class="section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>ISO 9001:2015, 14001:2015 Certification</h2>
+          <p>
+            We proudly hold ISO 9001:2015 and ISO 14001:2015 certifications, reflecting our commitment to quality management and environmental sustainability.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row align-items-center">
+            <!-- Left Certificate -->
+            <div class="col-md-6 text-center">
+              <img src="assets/img/certification1.webp" class="img-fluid floating-img" alt="ISO 9001:2015 Certification" loading="lazy" />
+            </div>
+            <!-- Right Certificate -->
+            <div class="col-md-6 text-center">
+              <img src="assets/img/certification2.webp" class="img-fluid floating-img" alt="ISO 14001:2015 Certification" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Certification Section -->
+
+      <!-- OEM Business Concept Section -->
+      <section id="oemconcept" class="section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>OEM Business Concept</h2>
+          <p>
+            Our OEM Business Concept is built upon three interconnected pillars: Research & Development (R&D), Plant Sub Assembly, and Warranty. 
+            We ensure a seamless production process, from innovative design and efficient assembly to comprehensive after-sales support, delivering high-quality solutions tailored to your needs.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <img
+            src="assets/img/oem-concept.webp"
+            class="img-fluid d-block mx-auto custom-business-img"
+            alt="" loading="lazy" />
+        </div>
+
+        <div class="container" data-aos="fade-up" data-aos-delay="300">
+          <div class="row text-center mt-5">
+            <div class="col-lg-6 mb-4">
+              <div class="business-box p-4 shadow-sm">
+                <h3>Design Development Customize</h3>
+                <p>
+                  We offer tailor-made design development and customization services to ensure that every product perfectly meets your specifications and brand requirements.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+              <div class="business-box p-4 shadow-sm">
+                <h3>Function Check, Quality Control & Logistic</h3>
+                <p>
+                  Our rigorous function checks, quality control protocols, and efficient logistic processes guarantee that each product is delivered on time and meets the highest quality standards.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /OEM Business Concept Section -->
+
+      <!-- Resume Section -->
+      <!-- <section id="resume" class="resume section">
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Resume</h2>
+          <p>
+            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
+            quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.
+          </p>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="resume-title">Sumary</h3>
+
+              <div class="resume-item pb-0">
+                <h4>Brandon Johnson</h4>
+                <p>
+                  <em
+                    >Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print
+                    marketing material from initial concept to final, polished deliverable.</em
+                  >
+                </p>
+                <ul>
+                  <li>Portland par 127,Orlando, FL</li>
+                  <li>(123) 456-7891</li>
+                  <li>alice.barkley@example.com</li>
+                </ul>
+              </div>
+
+              <h3 class="resume-title">Education</h3>
+              <div class="resume-item">
+                <h4>Master of Fine Arts &amp; Graphic Design</h4>
+                <h5>2015 - 2016</h5>
+                <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+                <p>
+                  Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti
+                  nerada porti sand markend
+                </p>
+              </div>
+
+              <div class="resume-item">
+                <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
+                <h5>2010 - 2014</h5>
+                <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+                <p>
+                  Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates
+                  asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <h3 class="resume-title">Professional Experience</h3>
+              <div class="resume-item">
+                <h4>Senior graphic design specialist</h4>
+                <h5>2019 - Present</h5>
+                <p><em>Experion, New York, NY </em></p>
+                <ul>
+                  <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
+                  <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project.</li>
+                  <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
+                  <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+                </ul>
+              </div>
+
+              <div class="resume-item">
+                <h4>Graphic design specialist</h4>
+                <h5>2017 - 2018</h5>
+                <p><em>Stepping Stone Advertising, New York, NY</em></p>
+                <ul>
+                  <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
+                  <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
+                  <li>Recommended and consulted with clients on the most appropriate graphic design</li>
+                  <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- /Resume Section -->
+
+      <!-- OEM Summary Section -->
+      <section id="oemsummary" class="services section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>OEM Business Summary</h2>
+          <p>
+            At Milenia, our OEM business is driven by a commitment to excellence. We ensure high quality standards and a consistent supply through rigorous quality control and comprehensive testing. With efficient logistics, cost-effective production, and the adoption of the latest technology, we consistently meet and exceed market expectations.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gy-4">
+            <!-- Service Item 1: HIGH QUALITY & CONSISTENT SUPPLY -->
+            <div class="col-lg-3 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon flex-shrink-0"><i class="bi bi-award"></i></div>
+              <div>
+                <h4 class="title"><a class="stretched-link">HIGH QUALITY & CONSISTENT SUPPLY</a></h4>
+                <p class="description">
+                  <ul>
+                    <li>OEM Standard</li>
+                    <li>Reliability Test</li>
+                    <li>100% In-house QC</li>
+                    <li>ISO 9001:2015</li>
+                    <li>ISO 14001:2015</li>
+                    <li>3D/2D Drawing</li>
+                    <li>8D/5 Why Report</li>
+                    <li>3 Years Warranty</li>
+                    <li>Experienced R&D Team</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <!-- Service Item 2: LOGISTIC -->
+            <div class="col-lg-3 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon flex-shrink-0"><i class="bi bi-truck"></i></div>
+              <div>
+                <h4 class="title"><a class="stretched-link">LOGISTIC</a></h4>
+                <p class="description">
+                  <ul>
+                    <li>Logistic Service</li>
+                    <li>Professional Warehousing</li>
+                    <li>Safety Stock</li>
+                    <li>Just in Time Delivery</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <!-- Service Item 3: COST COMPETITIVENESS -->
+            <div class="col-lg-3 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon flex-shrink-0"><i class="bi bi-currency-dollar"></i></div>
+              <div>
+                <h4 class="title"><a class="stretched-link">COST COMPETITIVENESS</a></h4>
+                <p class="description">
+                  <ul>
+                    <li>Cost Efficiency</li>
+                    <li>FTA 0% From China</li>
+                    <li>Efficient Organization</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <!-- Service Item 4: LATEST TECHNOLOGY -->
+            <div class="col-lg-3 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon flex-shrink-0"><i class="bi bi-cpu"></i></div>
+              <div>
+                <h4 class="title"><a class="stretched-link">LATEST TECHNOLOGY</a></h4>
+                <p class="description">
+                  <ul>
+                    <li>State-of-the-Art Solutions</li>
+                    <li>Customer-Centric Innovations</li>
+                    <li>Custom Design for Each Vehicle Model</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+          </div>
+        </div>
+      </section>
+      <!-- /Services Section -->
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Contact</h2>
+          <p>
+            We are here to assist you. Please reach out with any inquiries or support needs regarding our automotive solutions and services.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <div class="col-lg-12">
+              <div class="info-wrap">
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h3>Address</h3>
+                    <p>Pembangunan I Street No.1 3, RT.3/RW.1, Petojo Utara, Gambir, Central Jakarta, Indonesia 10130</p>
+                  </div>
+                </div>
+                <!-- End Info Item -->
+
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <div>
+                    <h3>Call Us</h3>
+                    <p>+62 216 311 133</p>
+                    <p>+61 816 142 5505</p>
+                  </div>
+                </div>
+                <!-- End Info Item -->
+
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h3>Email Us</h3>
+                    <p>info@ccas.co.id</p>
+                  </div>
+                </div>
+                <!-- End Info Item -->
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d106730.04460833022!2d106.82864737735066!3d-6.213642990002498!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5b9263ef499%3A0x351fb0582becf193!2sPT.%20Milenia%20Mega%20Mandiri!5e0!3m2!1sid!2sid!4v1740709394822!5m2!1sid!2sid" frameborder="0"
+                style="border: 0; width: 100%; height: 270px"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+
+            <!-- <div class="col-lg-7">
+              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                <div class="row gy-4">
+                  <div class="col-md-6">
+                    <label for="name-field" class="pb-2">Your Name</label>
+                    <input type="text" name="name" id="name-field" class="form-control" required="" />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="email-field" class="pb-2">Your Email</label>
+                    <input type="email" class="form-control" name="email" id="email-field" required="" />
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="subject-field" class="pb-2">Subject</label>
+                    <input type="text" class="form-control" name="subject" id="subject-field" required="" />
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="message-field" class="pb-2">Message</label>
+                    <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                  </div>
+
+                  <div class="col-md-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                    <button type="submit">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div> -->
+            <!-- End Contact Form -->
+          </div>
+        </div>
+      </section>
+      <!-- /Contact Section -->
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>© <span>Copyright</span> <strong class="px-1 sitename">Milenia Group</strong> <span>All Rights Reserved</span></p>
+        </div>
+        <div class="credits">
+          Designed by <a href="https://anandasatriaa.github.io/" target="_blank">IT Milenia Group</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
